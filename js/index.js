@@ -255,18 +255,19 @@ const filterOption = (recipesFilter) => {
   return recipesFilter;
 };
 const initDisplay = () => {
+  recipesFilter = recipes;
   if (search.value.length > 2) {
     recipesFilter = recipesFilter.filter(
       (data) =>
-        data.name.toLowerCase().includes(search.value) ||
-        data.description.toLowerCase().includes(search.value) ||
+        data.name.toLowerCase().includes(search.value.toLowerCase()) ||
+        data.description.toLowerCase().includes(search.value.toLowerCase()) ||
         data.ingredients.some((d) =>
-          d.ingredient.toLowerCase().includes(search.value)
+          d.ingredient.toLowerCase().includes(search.value.toLowerCase())
         )
     );
     recipesFilter = filterOption(recipesFilter);
   } else {
-    recipesFilter = filterOption(recipes);
+    recipesFilter = filterOption(recipesFilter);
   }
   displayList(recipesFilter);
 };
