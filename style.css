@@ -1,13 +1,90 @@
-.sectionLogo {
-  width: 268px;
-  height: 93px;
-  left: 588px;
-  top: 42px;
+body {
+  font-family: "Lato", sans-serif;
+  padding-bottom: 50px;
 }
-.logo {
-  left: 40.63%;
-  right: 40.53%;
-  top: 0%;
-  bottom: 50.22%;
-  background: #d04f4f;
+
+form input {
+  background-color: #e7e7e7;
+}
+#select1,
+#select1 select,
+.selectOption1 {
+  background-color: #3282f7;
+  color: white;
+  border-radius: 5px;
+}
+#select2,
+#select2 select,
+.selectOption2 {
+  background-color: #68d9a4;
+  color: white;
+  border-radius: 5px;
+}
+#select3 select,
+.selectOption3 {
+  background-color: #ed6454;
+  color: white;
+  border-radius: 5px;
+}
+.selectOption1,
+.selectOption2,
+.selectOption3 {
+  position: absolute;
+  width: 600px;
+  padding-bottom: 5px;
+  gap: 10px;
+}
+#select1,
+#select2,
+#select3 {
+  height: 70px;
+  color: white;
+  border-radius: 5px;
+  padding: 15px;
+}
+.selectOption1 span:hover,
+.selectOption2 span:hover,
+.selectOption3 span:hover {
+  background-color: white;
+  color: black;
+  cursor: pointer;
+}
+#select2 {
+  background-color: #68d9a4;
+}
+#select3 {
+  background-color: #ed6454;
+}
+.color1 {
+  background-color: #3282f7;
+}
+.color2 {
+  background-color: #68d9a4;
+}
+.color3 {
+  background-color: #ed6454;
+  border-radius: 5%;
+  padding: 5px;
+}
+.selectSection1 select,
+.selectSection2 select,
+.selectSection3 select {
+  width: 150px;
+  height: 70px;
+  color: white;
+  border-radius: 5px;
+  padding: 15px;
+}
+.itemImg {
+  background-color: #c7bebe;
+}
+.preparation {
+  overflow: hidden;
+  display: -webkit-box;
+  height: 100px;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 6;
+}
+.contentArticle {
+  background-color: #e7e7e7;
 }
