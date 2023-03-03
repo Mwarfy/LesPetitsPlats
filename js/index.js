@@ -255,6 +255,7 @@ const filterOption = (recipesFilter) => {
   return recipesFilter;
 };
 const initDisplay = () => {
+  const listSection = document.querySelector(".list_section");
   recipesFilter = recipes;
   if (search.value.length > 2) {
     recipesFilter = filterWithTab(recipesFilter);
@@ -262,7 +263,9 @@ const initDisplay = () => {
   } else {
     recipesFilter = filterOption(recipesFilter);
   }
-  displayList(recipesFilter);
+  recipesFilter.length
+    ? displayList(recipesFilter)
+    : (listSection.textContent = "Aucun résultat disponible");
 };
 
 const filterWithTab = (recipesFilter) => {
@@ -282,7 +285,7 @@ const filterWithTab = (recipesFilter) => {
     } else if (bool == false) {
       for (let j = 0; j < recipesFilter[i].ingredients.length; j++) {
         if (
-          recipesFilter[i].ingredients[j]
+          recipesFilter[i].ingredients[j].ingredient
             .toLowerCase()
             .includes(search.value.toLowerCase())
         ) {
@@ -295,7 +298,6 @@ const filterWithTab = (recipesFilter) => {
       recipesFilterTab.push(recipesFilter[i]);
     }
     bool = false;
-    i++;
   }
   return recipesFilterTab;
 };
