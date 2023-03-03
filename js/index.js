@@ -257,6 +257,7 @@ const filterOption = (recipesFilter) => {
   return recipesFilter;
 };
 const initDisplay = () => {
+  const listSection = document.querySelector(".list_section");
   recipesFilter = recipes;
   if (search.value.length > 2) {
     recipesFilter = recipesFilter.filter(
@@ -271,7 +272,9 @@ const initDisplay = () => {
   } else {
     recipesFilter = filterOption(recipesFilter);
   }
-  displayList(recipesFilter);
+  recipesFilter.length
+    ? displayList(recipesFilter)
+    : (listSection.textContent = "Aucun résultat disponible");
 };
 const init = () => {
   displayList(recipes);
