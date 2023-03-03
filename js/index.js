@@ -268,7 +268,9 @@ const filterWithTab = (recipesFilter) => {
   let recipesFilterTab = [];
   let bool = false;
   for (let i = 0; i < recipesFilter.length; i++) {
-    if (recipesFilter[i].name.toLowerCase().includes(search.value)) {
+    if (
+      recipesFilter[i].name.toLowerCase().includes(search.value.toLowerCase())
+    ) {
       recipesFilterTab.push(recipesFilter[i]);
       bool = true;
     } else if (
