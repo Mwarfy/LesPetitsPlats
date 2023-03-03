@@ -107,7 +107,9 @@ const displayOptions = (
     input.addEventListener("input", () => {
       selectOption.innerHTML = "";
       displayFilterOption(
-        unique.filter((data) => data.toLowerCase().includes(input.value)),
+        unique.filter((data) =>
+          data.toLowerCase().includes(input.value.toLowerCase())
+        ),
         color,
         selectOption,
         onMap
