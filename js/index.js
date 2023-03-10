@@ -268,10 +268,8 @@ const initDisplay = () => {
           d.ingredient.toLowerCase().includes(search.value.toLowerCase())
         )
     );
-    recipesFilter = filterOption(recipesFilter);
-  } else {
-    recipesFilter = filterOption(recipesFilter);
   }
+  recipesFilter = filterOption(recipesFilter);
   recipesFilter.length
     ? displayList(recipesFilter)
     : (listSection.textContent = "Aucun résultat disponible");
